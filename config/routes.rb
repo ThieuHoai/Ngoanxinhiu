@@ -1,6 +1,7 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   authenticate :user, ->(u) { u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
   end
@@ -13,4 +14,9 @@ Rails.application.routes.draw do
   root "home#index"
 
   resources :appoinments
+  resources :visitors
+  resources :payments
+  resources :animal_placements
+  resources :animals
+  resources :categories
 end
