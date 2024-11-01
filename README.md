@@ -1,11 +1,11 @@
 # README
 
-## GROUP <add-group-name>
+## GROUP Ngoanxinhiuu
 
-- Member 1: <add-name>
-- Member 2: <add-name>
-- Member 3: <add-name>
-- Member 4: <add-name>
+- Member 1: Mai Lê Phương Loan
+- Member 2: Thiệu Thu Hoài
+- Member 3: Lâm Tuấn Kiệt
+- Member 4: Nguyễn Thị Thanh Huyền
 
 ## Starting server
 
