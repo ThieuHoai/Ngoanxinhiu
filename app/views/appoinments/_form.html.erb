@@ -13,7 +13,7 @@
 
   <div class="mb-6">
         <%= form.label :date, class: label_class %>
-          <%= form.datetime_field :date, class: input_class %>
+          <%= form.select :subject_id, options_from_collection_for_select( Subject.all, 'id', 'name', selected = appoinment.subject_id), class: label_class %>
       </div>
   <div class="mb-6">
         <%= form.label :details, class: label_class %>
