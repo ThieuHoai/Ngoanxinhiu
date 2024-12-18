@@ -1,4 +1,5 @@
 class AppoinmentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_appoinment, only: %i[ show edit update destroy ]
 
   # GET /appoinments or /appoinments.json
@@ -65,6 +66,6 @@ class AppoinmentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def appoinment_params
-      params.require(:appoinment).permit(:date, :details)
+      params.require(:appoinment).permit(:date, :details, :image, :visitor_id)
     end
 end

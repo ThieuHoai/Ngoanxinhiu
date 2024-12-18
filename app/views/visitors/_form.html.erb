@@ -10,7 +10,10 @@
   </ul>
 </div>
 <% end %>
-
+  <div class="mb-6">
+        <%= form.label :visitor_id, class: label_class %>
+          <%= form.text_field :visitor_id, placeholder: "Enter Visitor ID" %>
+      </div>
   <div class="mb-6">
         <%= form.label :name, class: label_class %>
           <%= form.text_area :name, class: input_class %>
@@ -20,8 +23,8 @@
           <%= form.text_area :gender, class: input_class %>
       </div>
   <div class="mb-6">
-        <%= form.label :Phone_number, class: label_class %>
-          <%= form.text_area :Phone_number, class: input_class %>
+        <%= form.label :phone_number, class: label_class %>
+          <%= form.text_area :phone_number, class: input_class %>
       </div>
   <div class="mb-6">
         <%= form.label :address, class: label_class %>

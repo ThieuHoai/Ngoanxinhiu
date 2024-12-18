@@ -4,6 +4,8 @@ class CreateAnimals < ActiveRecord::Migration[7.0]
       t.text :name
       t.text :species
       t.text :characteristic
+      t.text :location
+      t.text :animal_id
 
       t.timestamps
     end

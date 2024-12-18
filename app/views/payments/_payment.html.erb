@@ -1,5 +1,15 @@
 <div id="<%= dom_id payment %>">
   <p>
+    <strong>Payment_id:</strong>
+    <%= payment.payment_id %>
+  </p>
+
+  <p>
+    <strong>Visitor_id:</strong>
+    <%= payment.visitor_id %>
+  </p>
+
+  <p>
     <strong>Amount:</strong>
     <%= payment.amount %>
   </p>
@@ -12,6 +22,11 @@
   <p>
     <strong>Payment date:</strong>
     <%= payment.payment_date %>
+  </p>
+
+  <p>
+    <strong>Status:</strong>
+    <%= payment.status %>
   </p>
 
 </div>

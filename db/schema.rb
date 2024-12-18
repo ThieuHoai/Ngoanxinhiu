@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2024_10_24_173236) do
+ActiveRecord::Schema[7.0].define(version: 2024_12_14_173010) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,18 +52,16 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_24_173236) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "animal_placements", force: :cascade do |t|
-    t.text "location"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "animals", force: :cascade do |t|
     t.text "name"
     t.text "species"
     t.text "characteristic"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "location"
+    t.integer "animal_id"
+    t.integer "category_id"
+    t.integer "zookeeper_id"
   end
 
   create_table "appoinments", force: :cascade do |t|
@@ -71,12 +69,14 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_24_173236) do
     t.text "details"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "visitor_id"
   end
 
   create_table "categories", force: :cascade do |t|
     t.text "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "category_id"
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -94,6 +94,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_24_173236) do
     t.decimal "amount"
     t.text "payment_method"
     t.datetime "payment_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "payment_id"
+    t.integer "visitor_id"
+    t.string "status"
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -116,10 +125,23 @@ ActiveRecord::Schema[7.0].define(version: 2024_10_24_173236) do
   create_table "visitors", force: :cascade do |t|
     t.text "name"
     t.text "gender"
-    t.text "Phone_number"
+    t.text "phone_number"
     t.text "address"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "visitor_id"
+  end
+
+  create_table "zookeepers", force: :cascade do |t|
+    t.string "name"
+    t.datetime "date_of_birth"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "zookeeper_id"
+    t.string "gender"
+    t.string "phone_number"
+    t.string "email"
+    t.integer "experience_years"
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"

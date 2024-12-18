@@ -6,7 +6,7 @@
 - Member 2: Thiệu Thu Hoài
 - Member 3: Lâm Tuấn Kiệt
 - Member 4: Nguyễn Thị Thanh Huyền
-
+- Member 5: Phạm Quốc Việt 
 ## Starting server
 
 - Run on your terminal `docker-compose up`

@@ -65,6 +65,6 @@ class VisitorsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def visitor_params
-      params.require(:visitor).permit(:name, :gender, :Phone_number, :address)
+      params.require(:visitor).permit(:name, :gender, :phone_number, :address, :visitor_id)
     end
 end

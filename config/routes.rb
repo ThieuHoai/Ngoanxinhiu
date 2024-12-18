@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root "appoiments#index"
+  root "appoinments#index"
 
   resources :appoinments
   resources :visitors
@@ -19,4 +19,5 @@ Rails.application.routes.draw do
   resources :animal_placements
   resources :animals
   resources :categories
+  resources :zookeepers
 end

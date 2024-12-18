@@ -1,0 +1,49 @@
+<%= form_with(model: zookeeper) do |form| %>
+<% if zookeeper.errors.any? %>
+<div id="error_explanation" class="bg-red-50 p-6 rounded text-red-800">
+  <h2 class="text-lg font-semibold mb-3"><%= pluralize(zookeeper.errors.count, "error") %> prohibited this zookeeper from being saved:</h2>
+
+  <ul class="list-disc leading-relaxed">
+    <% zookeeper.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+  <div class="mb-6">
+        <%= form.label :zookeeper_id, class: label_class %>
+          <%= form.text_field :zookeeper_id, placeholder: "Enter Zookeeper ID" %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :name, class: label_class %>
+          <%= form.text_field :name, class: input_class %>
+      </div>
+  <div class="mb-6">
+      <%= form.label :gender, class: label_class %>
+        <%= form.text_area :gender, class: input_class %>
+      </div>
+  <div class="mb-6">
+      <%= form.label :phone_number, class: label_class %>
+        <%= form.text_area :phone_number, class: input_class %>
+      </div>
+  <div class="mb-6">
+      <%= form.label :email, class: label_class %>
+        <%= form.text_area :email, class: input_class %>
+      </div>
+  <div class="mb-6">
+      <%= form.label :experience_years, class: label_class %>
+        <%= form.text_field :experience_years, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :date_of_birth, class: label_class %>
+          <%= form.date_field :date_of_birth, class: input_class %>
+      </div>
+
+<%= form.submit class: button_class(theme: 'primary') %>
+
+<% if zookeeper.persisted? %>
+<%= link_to "Cancel", zookeeper, class: "text-neutral-700 underline inline-block ml-3" %>
+<% else %>
+<%= link_to "Cancel", zookeepers_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<% end %>
+<% end %>

@@ -10,7 +10,10 @@
   </ul>
 </div>
 <% end %>
-
+  <div class="mb-6">
+        <%= form.label :category_id, class: label_class %>
+          <%= form.text_field :category_id, placeholder: "Enter Category ID" %>
+      </div>
   <div class="mb-6">
         <%= form.label :name, class: label_class %>
           <%= form.text_area :name, class: input_class %>

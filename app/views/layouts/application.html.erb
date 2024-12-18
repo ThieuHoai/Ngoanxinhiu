@@ -1,9 +1,15 @@
 <!DOCTYPE html>
 <html class="h-full antialiased">
+<head>
+<%= favicon_link_tag 'favicon.ico' %>
+
+
+</head>
   <%= render "shared/head" %>
 
   <body class="font-sans font-normal leading-normal text-gray-800 bg-white flex flex-col min-h-screen ">
-
+  <div class="background-overlay"></div> 
+         
     <header>
       <%= render "shared/flash_notice" %>
       <%= render "shared/navbar" %>

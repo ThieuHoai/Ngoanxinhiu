@@ -14,6 +14,7 @@
     <thead class="bg-slate-50 dark:bg-slate-700">
       <tr>
         
+          <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Category_id</th>
           <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Name</th>
         
                 
@@ -24,6 +25,7 @@
       <% @categories.each do |category| %>
       <%= content_tag :tr, id: dom_id(category), class: dom_class(category) do %>
       
+        <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= link_to category.category_id, category %></td>
         <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= link_to category.name, category %></td>
       
 

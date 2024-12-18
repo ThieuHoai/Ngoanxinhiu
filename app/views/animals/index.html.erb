@@ -14,10 +14,12 @@
     <thead class="bg-slate-50 dark:bg-slate-700">
       <tr>
         
+          <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Animal_id</th>
           <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Name</th>
         
                   <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Species</th>
                   <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Characteristic</th>
+                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Location</th>
                 
       </tr>
     </thead>
@@ -26,11 +28,13 @@
       <% @animals.each do |animal| %>
       <%= content_tag :tr, id: dom_id(animal), class: dom_class(animal) do %>
       
+        <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= animal.animal_id %></td>
         <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= link_to animal.name, animal %></td>
       
 
               <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= animal.species %></td>
               <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= animal.characteristic %></td>
+              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= animal.location %></td>
       
       
       <% end %>

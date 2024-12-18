@@ -11,9 +11,23 @@
 </div>
 <% end %>
 
+   <div class="mb-6">
+    <%= form.label :category_id, "Category" %>
+    <%= form.collection_select :category_id, Category.all, :id, :name, prompt: "Select a Category" %>
+  </div>
+
   <div class="mb-6">
-        <%= form.label :name, class: label_class %>
-          <%= form.text_area :name, class: input_class %>
+    <%= form.label :zookeeper_id, "Zookeeper" %>
+    <%= form.collection_select :zookeeper_id, Zookeeper.all, :id, :name, prompt: "Select a Zookeeper" %>
+  </div>
+
+  <div class="mb-6">
+        <%= form.label :animal_id, class: label_class %>
+          <%= form.text_field :animal_id, placeholder: "Enter Animal ID" %>
+      </div>
+  <div class="mb-6">
+      <%= form.label :name, class: label_class %>
+        <%= form.text_area :name, class: input_class %>
       </div>
   <div class="mb-6">
         <%= form.label :species, class: label_class %>
@@ -23,6 +37,10 @@
         <%= form.label :characteristic, class: label_class %>
           <%= form.text_area :characteristic, class: input_class %>
       </div>
+  <div class="mb-6">
+      <%= form.label :location, class: label_class %>
+        <%= form.text_area :location, class: input_class %>
+    </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>
 

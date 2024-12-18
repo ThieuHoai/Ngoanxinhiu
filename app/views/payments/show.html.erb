@@ -14,6 +14,14 @@
 
   <ul class="text-slate-700">
       <li>
+        <p class="font-semibold">Payment_id:</p>
+        <p><%= @payment.payment_id %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Visitor_id:</p>
+        <p><%= @payment.visitor_id %></p>
+      </li>
+      <li>
         <p class="font-semibold">Amount:</p>
         <p><%= @payment.amount %></p>
       </li>
@@ -24,6 +32,10 @@
       <li>
         <p class="font-semibold">Payment date:</p>
         <p><%= @payment.payment_date %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Status:</p>
+        <p><%= @payment.status %></p>
       </li>
   </ul>
 </div>

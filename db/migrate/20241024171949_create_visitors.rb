@@ -3,7 +3,7 @@ class CreateVisitors < ActiveRecord::Migration[7.0]
     create_table :visitors do |t|
       t.text :name
       t.text :gender
-      t.text :Phone_number
+      t.text :phone_number
       t.text :address
 
       t.timestamps
